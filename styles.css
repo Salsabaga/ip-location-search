@@ -1,0 +1,155 @@
+:root {
+	font-family: "Rubik", sans-serif;
+	--primary-text: hsl(0, 0%, 17%);
+	--secondary-text: hsl(0, 0%, 59%);
+}
+body {
+	height: 100%;
+	margin: 0;
+}
+
+#map-title {
+	color: hsl(0, 0%, 100%);
+	font-size: 2em;
+	font-weight: 500;
+}
+
+#map-title,
+#map-search {
+	padding: 0.5em 0;
+	text-align: center;
+}
+
+#map-search {
+	display: flex;
+	justify-content: center;
+}
+
+#map-details {
+	position: relative;
+	width: 75%;
+	background-color: hsl(0, 0%, 100%);
+	display: flex;
+	flex-direction: row;
+	margin: 1.5em auto;
+	padding: 2em 0.2em;
+	border-radius: 15px;
+	z-index: 2;
+}
+
+#search {
+	width: 33.3%;
+	padding: 15px 30px;
+	border: none;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	font-size: 1.125rem;
+	font-family: "Rubik", sans-serif;
+}
+
+input:focus {
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+#ip-btn {
+	background-image: url("images/icon-arrow.svg");
+	background-color: black;
+	background-size: small;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	padding: 0 30px 0 20px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	cursor: pointer;
+}
+
+.results {
+	position: relative;
+	padding: 0 25px;
+	width: 25%;
+	border-left: solid 2px;
+	border-image: linear-gradient(
+			hsl(0, 0%, 100%),
+			hsl(0, 0%, 79%),
+			hsl(0, 0%, 100%)
+		)
+		0 100% 0;
+}
+
+.results:first-child {
+	border-left: none;
+}
+
+.sub-title {
+	color: var(--secondary-text);
+	font-weight: 500;
+}
+
+.search-data {
+	color: var(--primary-text);
+	font-size: 1.5em;
+	font-weight: 700;
+	padding: 0.5em 0 1em 0;
+}
+
+#mapid {
+	height: 70vh;
+	z-index: 1;
+}
+#pattern-img {
+	background-image: url("images/pattern-bg.png");
+	height: 30vh;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+	#pattern-img {
+		height: 40vh;
+	}
+
+	#map-title {
+		font-size: 1.5em;
+	}
+
+	#map-title,
+	#map-search {
+		padding-top: 1.5em;
+	}
+
+	#map-details {
+		flex-direction: column;
+		padding: 1em 0;
+		width: 70%;
+	}
+
+	#search {
+		font-size: 1em;
+		width: 50%;
+	}
+
+	.results {
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		border: none;
+	}
+
+	.sub-title {
+		font-size: 0.75em;
+	}
+	.search-data {
+		font-size: 1.25em;
+	}
+}
